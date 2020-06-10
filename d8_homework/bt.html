@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8
+    </title>
+</head>
+
+<!-- <body> -->
+<!-- Bài tập 1
+    <button onclick="timedText()">Display timed text</button>
+    <input type="text" id="txt">
+    <script>
+    function timedText() {
+      var x = document.getElementById("txt");
+      setTimeout(function(){ x.value="2 seconds" }, 2000);
+      setTimeout(function(){ x.value="4 seconds" }, 4000);
+      setTimeout(function(){ x.value="6 seconds" }, 6000);
+    }
+    // sau khi click vào button 2 giây sau hiện 2 seconds, 4 giây hiện 4 seconds, và 6 giây hiện 6 seconds
+    </script> -->
+
+<!-- Bài tập 2
+
+    <button onclick="openWin()">Open "myWindow"</button>
+    <script>
+        function openWin() {
+            var myWindow = window.open("", "myWindow", "width=200, height=100");
+            myWindow.document.write("<p>This is 'myWindow'</p>");
+            setTimeout(function () { myWindow.close() }, 3000);
+        }
+        // su khi bấm vào button thì mởi ra 1 tab mới, sau 3 giây tab tự động đóng
+    </script> -->
+
+<!-- Bài tập 3
+    <button onclick="startCount()">Start count!</button>
+    <input type="text" id="txt">
+    <button onclick="stopCount()">Stop count!</button>
+    <script>
+        var c = 0;
+        var t;
+        var timer_is_on = 0;
+        function timedCount() {
+            document.getElementById("txt").value = c;
+            c = c + 1;
+            t = setTimeout(timedCount, 1000);
+        }
+        function startCount() {
+            if (!timer_is_on) {
+                timer_is_on = 1;
+                timedCount();
+            }
+        }
+        function stopCount() {
+            clearTimeout(t);
+            timer_is_on = 0;
+        }
+        // khi bấm start count thì đồng hồ bắt đầu đếm, bấm stop count thì đồng hồ dừng
+    </script> -->
+<!-- </body > -->
+<!-- Bài tập 4
+
+<body onload="startTime()">
+    <div id="txt"></div>
+    <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      // add a zero in front of numbers<10
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+      var t = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+    </script>
+    </body>
+    </html> -->
+<!-- chương trình tạo ra 1 đồng hồ điện tử đếm thời gian -->
+
+<!-- Bài tập 5
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("demo").innerHTML = t;
+        }
+    </script>
+</body> -->
+ <!-- tạo ra 1 đồng hồ đém thời gian theo hệ 12h -->
+<!-- 
+Bài tập 6
+
+<body>
+    <p id="demo"></p>
+<button onclick="myStopFunction()">Stop time</button>
+<script>
+var myVar = setInterval(myTimer, 1000);
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+function myStopFunction() {
+  clearInterval(myVar);
+}
+</script>
+</body> -->
+<!-- tạo ra 1 đòng hồ đếm thời gian và 1 nút stop time. khi bấm đồng hồ sẽ ngừng đếm -->
+
+</html>
